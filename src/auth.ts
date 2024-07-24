@@ -24,30 +24,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
           role: "admin",
         };
 
-        // if (credentials?.validateType == "credentials") {
-        //   const isValidEmail = user.email === credentials?.email;
-        //   const isValidPassword = user.password === credentials?.password;
-
-        //   if (!isValidEmail || !isValidPassword) {
-        //     return null;
-        //   }
-
-        //   return { ...user, credentialsVerified: true };
-        // }
-
-        // if (credentials?.validateType == "two-factor-code") {
-        //   const isValid2fa = "12345" === credentials?.code2fa;
-
-        //   if (!isValid2fa) {
-        //     return null;
-        //   }
-
-        //   return { ...user, userAutenticated: true };
-        // }
-
         return { ...user, credentialsVerified: false };
-
-        return null;
       },
     }),
   ],
