@@ -23,8 +23,6 @@ export const authConfig = {
       const isLoggedIn = !!auth?.userAutenticated;
       const userRole = auth?.user?.role;
 
-      console.log("XXXXXXXXXXXX", auth);
-
       if (!isLoggedIn) return false;
 
       if (isLoggedIn && !nextUrl.pathname.startsWith("/private")) {
